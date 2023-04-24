@@ -1,58 +1,62 @@
 import React, {useState} from 'react';
-import signupImg from "../../assets/signup-img.jpg"
-import googleIcon from "../../assets/flat-color-icons_google.png"
+import signupImg from "../../assets/signup-img.jpg";
+import googleIcon from "../../assets/flat-color-icons_google.png";
+import styles from "./Signup.module.scss";
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
     return (
         <main>
-        <div className="container">
-            <div className="signup-image">
-                <img src={signupImg} alt="Signup Image" />
+            <div className={styles.signup_container}>
+                <div className={styles.signup_image}>
+                    <img src={signupImg} alt="Signup Image" />
+                </div>
+                <div className={styles.signup_details}>
+                    <div className={styles.signup_details_heading}>
+                        <h1 className={styles.signup_title}>
+                            Create an Account
+                        </h1 >
+                        <p className={styles.signup_para}>Became holidaze member ,you’ll get exlusive
+                            offers from holidaze</p>
+                    </div>
+                    <form className={styles.form}>
+                        <div className={styles.form_body}>
+                            <div className={styles.username}>
+                                <label className="form__label" htmlFor="name">Name{""} </label>
+                                <input className={styles.form_input} type="text" id="name" placeholder="Enter your name"/>
+                            </div>
+                            <div className={styles.email}>
+                                <label className={styles.form_label} htmlFor="email">Email{""} </label>
+                                <input type="email" id="email" className={styles.form_input} placeholder="Enter email"/>
+                            </div>
+                            <div className={styles.password}>
+                                <label className={styles.form_label} htmlFor="password">Password{""} </label>
+                                <input className={styles.form_input} type="password" id="password" placeholder="Create a Password"/>
+                            </div>
+                            <div className={styles.confirm_password}>
+                                <label className={styles.form_label} htmlFor="confirmPassword">Confirm Password {""}</label>
+                                <input className={styles.form_input} type="password" id="confirmPassword"
+                                       placeholder="Confirm Password"/>
+                            </div>
+                            <div className={styles.Avatar}>
+                                <label className={styles.form_label} htmlFor="avatar">Avatar{""}</label>
+                                <input type="avatar" name="avatar" id="avatar" className={styles.form_input} placeholder="Avatar url"/>
+                            </div>
+                        </div>
+                        <div className={styles.btn}>
+                            <button type="submit" className={styles.submit_btn}>Create an Account</button>
+                        </div>
+                        <div className={styles.btn}>
+                            <button type="submit" className={styles.google_btn}>
+                                <img src={googleIcon} alt="google Icon" />
+                                Sign up with Google</button>
+                        </div>
+                        <div>
+                            <p className={styles.signup}>Already have an account?{""} <Link>log in</Link></p>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div className="">
-                <h1 className="signup-title">
-                    Create an Account
-                </h1>
-                <p className="signup-title">Became holidaze member ,you’ll get exlusive
-                    offers from holidaze</p>
-            </div>
-            <div className="form">
-                <div className="form-body">
-                    <div className="username">
-                        <label className="form__label" htmlFor="name">Name </label>
-                        <input className="form__input" type="text" id="name" placeholder="Enter your name"/>
-                    </div>
-                    <div className="email">
-                        <label className="form__label" htmlFor="email">Email </label>
-                        <input type="email" id="email" className="form__input" placeholder="Enter email"/>
-                    </div>
-                    <div className="password">
-                        <label className="form__label" htmlFor="password">Password </label>
-                        <input className="form__input" type="password" id="password" placeholder="Create a Password"/>
-                    </div>
-                    <div className="confirm-password">
-                        <label className="form__label" htmlFor="confirmPassword">Confirm Password </label>
-                        <input className="form__input" type="password" id="confirmPassword"
-                               placeholder="Confirm Password"/>
-                    </div>
-                    <div className="Avatar">
-                        <label className="form__label" htmlFor="avatar">Avatar</label>
-                        <input type="avatar" name="avatar" id="avatar" className="form__input" placeholder="Avatar url"/>
-                    </div>
-                </div>
-                <div className="submit-btn">
-                    <button type="submit" className="btn">Create an Account</button>
-                </div>
-                <div className="google-btn">
-                    <button type="submit" className="btn">
-                        <img src={googleIcon} alt="google Icon" />
-                        Sign up with Google</button>
-                </div>
-                <div>
-                    <p className="">Already have an account? <a>log in</a></p>
-                </div>
-            </div>
-        </div>
         </main>
     );
 };
