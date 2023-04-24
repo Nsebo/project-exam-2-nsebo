@@ -46,7 +46,7 @@ const Signup = () => {
                 <div className="google-btn">
                     <button type="submit" className="btn">
                         <img src={googleIcon} alt="google Icon" />
-                        Log in</button>
+                        Sign up with Google</button>
                 </div>
                 <div>
                     <p className="">Already have an account? <a>log in</a></p>
