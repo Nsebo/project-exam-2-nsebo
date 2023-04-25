@@ -8,7 +8,7 @@
 
   .signup_image{
     flex: 0.5;
-    img{
+    img {
       height: 100vh;
       object-fit: cover;
       width: 100%;
@@ -27,15 +27,16 @@
         font-size: 2rem;
       }
     }
+
     form{
-      .form_body{
+      .form_body {
         label {
           display: block;
           width: 100%;
           margin-top: 1rem;
         }
 
-        input{
+        input {
           width: 100%;
           padding: 0.5rem 0.8rem;
           margin-top: 0.3rem;
@@ -46,6 +47,7 @@
         }
       }
     }
+
     .btn {
       button {
         width: 100%;

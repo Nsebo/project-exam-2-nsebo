@@ -52,7 +52,7 @@ const Signup = () => {
                                 Sign up with Google</button>
                         </div>
                         <div>
-                            <p className={styles.signup}>Already have an account?{""} <Link>log in</Link></p>
+                            <p className={styles.login}>Already have an account?{""} <Link to="/login">log in</Link></p>
                         </div>
                     </form>
                 </div>
