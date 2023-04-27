@@ -1,0 +1,24 @@
+.hero_container{
+  background-color: #4c5b63;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.hero_details{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn{
+  margin: 2rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  border: none;
+  color: #4c5b63;
+}
+
+.mapIcon{
+
+}
