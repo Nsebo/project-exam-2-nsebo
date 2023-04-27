@@ -15,27 +15,28 @@ const Hero = () => {
                 <p>Your home away from home where you stay with comfort</p>
                 <button className={styles.btn}>Book Now</button>
             </div>
-            <div className={styles.heroBanner_form}>
-                <form>
-                   <div>
-                       <span className={styles.mapIcon}><img src={mapIcon} alt='map icon' /></span>
-                       <input type="text" name="text" className={styles.name} id="text" placeholder="Where are you going?"/>
-                   </div>
-                   <div>
-                       <span><img src={calenderIcon} alt='map icon' /></span>
-                       <input type="text" name="text" className={styles.name} id="text" placeholder="Check in date - Check out date"  />
-                   </div>
+            <div className={styles.heroBanner}>
+                <form className={styles.heroBanner_form}>
+                    <div>
+                        <span className={styles.mapIcon}><img src={mapIcon} alt='map icon' /></span>
+                        <input type="text" name="text" className={styles.name} id="text" placeholder="Where are you going?"/>
+                    </div>
+                    <div>
+                        <span><img src={calenderIcon} alt='map icon' /></span>
+                        <input type="text" name="text" className={styles.name} id="text" placeholder="Check in date - Check out date"  />
+                    </div>
                     <div>
                         <span><img src={userIcon} alt='user icon' /></span>
                         <input type="text" name="text" className={styles.name} id="text" placeholder="1 adult. 0 children . 1 room"/>
                     </div>
-                   <div>
-                       <span><img src={searchIcon} alt='search icon' /></span>
-                       <input type="search" name="text" className={styles.search} id="text" placeholder="Search"/>
-                   </div>
+                    <div>
+                        <span><img src={searchIcon} alt='search icon' /></span>
+                        <input type="search" name="text" className={styles.search} id="text" placeholder="Search"/>
+                    </div>
                 </form>
             </div>
         </section>
+
 
     );
 };
