@@ -13,6 +13,9 @@ const Header = () => {
                         <li>List your property</li>
                     </ul>
                 </nav>
+                <button>Log in</button>
+                <button>Sign Up</button>
+
             </header>
         </div>
     );
