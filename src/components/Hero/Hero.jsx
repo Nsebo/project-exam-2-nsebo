@@ -5,9 +5,11 @@ import mapIcon from "../../assets/map-pin.svg";
 import calenderIcon from "../../assets/calendar.svg";
 import userIcon from "../../assets/user.svg";
 import searchIcon from "../../assets/search.svg";
+import Layout from "../../layouts/Layout/Layout.jsx";
 
 const Hero = () => {
     return (
+        <Layout>
         <section className={styles.hero_container}>
             <img src={heroBannerImg} alt='heroBanner Image' />
             <div className={styles.hero_details}>
@@ -36,6 +38,7 @@ const Hero = () => {
                 </form>
             </div>
         </section>
+        </Layout>
 
 
     );

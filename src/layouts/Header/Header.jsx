@@ -1,24 +1,27 @@
 import React from 'react';
-import styles from "../Footer/Footer.module.scss";
+import styles from './Header.module.scss';
 
 const Header = () => {
     return (
-        <div>
+
             <header className={styles.header_container}>
-                <h1 className={styles.header_name}>Holidaze</h1>
+                <div>
+                    <h1 className={styles.header_logo}>Holidaze</h1>
+                </div>
                 <nav className={styles.nav_container}>
-                    <ul>
+                    <ul className={styles.ul}>
                         <li>Explore</li>
                         <li>Rooms</li>
                         <li>About</li>
                         <li>List your property</li>
                     </ul>
                 </nav>
-                <button>Log in</button>
-                <button>Sign Up</button>
-
+                <div className={styles.btn}>
+                    <button className={styles.btn_logIn}>Log in</button>
+                    <button className={styles.btn_signUp}>Sign Up</button>
+                </div>
             </header>
-        </div>
+
     );
 };
 
