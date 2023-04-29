@@ -6,7 +6,7 @@
   max-width: 100vw;
   overflow: hidden;
 
-  .signup_image{
+  .signup_image {
     flex: 0.5;
     img {
       height: 100vh;
@@ -23,12 +23,13 @@
     flex: 0.5;
 
     .signup_details_heading {
-      h1{
+      h1 {
         font-size: 2rem;
       }
     }
 
-    form{
+    form {
+      width: 67%;
       .form_body {
         label {
           display: block;
@@ -49,16 +50,13 @@
     }
 
     .btn {
+      margin-top: 2rem;
       button {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 1rem 0 1rem;
+        margin: 0 0 1rem;
         cursor: pointer;
         border-radius: 0.5rem;
         font-weight: bold;
-
       }
 
       .submit_btn {
@@ -76,6 +74,13 @@
         background-color: #fff;
         padding: 0.4rem;
       }
+    }
+
+    .signup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
     }
   }
 }
