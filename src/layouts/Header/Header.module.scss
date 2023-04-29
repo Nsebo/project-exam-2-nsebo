@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 6rem;
+  background-color: #f3f6f8;
+
   ul {
     display: flex;
     gap: 2rem;
@@ -13,19 +16,14 @@
     }
   }
 
-  .btn{
-   display: flex;
+  .btn {
+    display: flex;
     align-items: center;
     gap: 1.1rem;
 
     button {
       background-color: #fff;
-      color:#4C5B63;
-      border-radius: .2rem;
-
+      color: #4c5b63;
     }
   }
-
 }
-
-
