@@ -84,7 +84,7 @@ const Login = () => {
             <div>
               <p className={styles.signup}>
                 Don’t have an account?{' '}
-                <Link to='/signup'> Sign up for free</Link>
+                <Link to='/signup'>Sign up for free</Link>
               </p>
             </div>
           </form>
