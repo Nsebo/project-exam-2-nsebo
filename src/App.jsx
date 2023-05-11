@@ -7,17 +7,17 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home.jsx';
 
 function App() {
-  const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0);
 
-  return (
-      <div className='app'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='signup' element={<Signup />} />
-          <Route path='login' element={<Login />} />
-        </Routes>
-      </div>
-  );
+    return (
+        <div className='app'>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='signup' element={<Signup />} />
+                <Route path='login' element={<Login />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
