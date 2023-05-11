@@ -1,0 +1,14 @@
+.venue_wrapper {
+  max-width: 80vw;
+  margin: 0 auto 2rem;
+
+  .venue_container {
+    max-width: 80vw;
+    margin: 0 auto 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+}
