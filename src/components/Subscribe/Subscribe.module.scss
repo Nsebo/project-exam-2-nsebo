@@ -1,0 +1,42 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    line-height: 45px;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    width: 50vw;
+    margin: 0 auto;
+    position: relative;
+    margin: 1rem 0 2rem;
+
+    input {
+      width: 100%;
+      padding: 1.2rem;
+      background: #ffffff;
+      box-shadow: 1.60184px 3.20368px 25.6295px rgba(37, 49, 65, 0.2);
+      border-radius: 6.40737px;
+      border: none;
+    }
+
+    button {
+      position: absolute;
+      right: 0.5rem;
+      top: 0.5rem;
+      background-color: #4c5b63;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.9rem;
+      border-radius: 0.4rem;
+      padding: 0.7rem 1rem;
+      border: none;
+    }
+  }
+}
