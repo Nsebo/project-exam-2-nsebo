@@ -1,42 +1,61 @@
 import React from 'react';
 import styles from './Footer.module.scss';
+import { Link } from 'react-router-dom';
+import mail from '../../assets/mail.png';
+import phone from '../../assets/phone.png';
+import home from '../../assets/home.png';
+import facebook_icon from '../../assets/facebook_icon.png';
+import twitter_icon from '../../assets/twitter_icon.png';
+import instagram_icon from '../../assets/instagram_icon.png';
 
 const Footer = () => {
-    return (
-        <footer>
-            <div className={styles.footer_section}>
-                <div className={styles.footer_info}>
-                <h1 className={styles.footer_name}>
-                   Holidaze
-                </h1>
-                    <p>Your home away from home <strong>where you stay with comfort</strong>
-                       </p>
-                </div>
-                <div className={styles.useful_links}>
-                    <div className={styles.footer_links}>Useful Links</div>
-                    <ul className={styles.useful_li}>
-                        <li>Explore</li>
-                        <li>Sign Up</li>
-                        <li>Login</li>
-                        <li>About Us</li>
-                        <li>Rooms</li>
-                    </ul>
-                </div>
-                <div className={styles.form_section}>
-                    <div className={styles.footer_title}>Get in Touch</div>
-                    <form action="/" method="post" >
-                        <input type="text" name="name" className={styles.input} id="name" placeholder="Enter your Name"/>
-                        <input type="email" name="email" className={styles.input} id="email" placeholder="Enter your Email Address"/>
-                        <textarea type="text" name="message" className={styles.input} id="message"
-                                  placeholder="Enter your message..."></textarea>
-                        <button type="submit" className={styles.submit_btn}>Send Message</button>
-                    </form>
-                </div>
-            </div>
-            <div className={styles.copy_right}>Copyright &copy; 2023 | Holidaze, designed and programmed by Nsebo</div>
-        </footer>
-
-    );
-}
+  return (
+    <footer>
+      <div className={styles.footer_wrapper}>
+        <div className={styles.footer_logo}>
+          <h2>Holidaze</h2>
+          <p>Your home away from where you stay with comfort</p>
+        </div>
+        <div className={styles.footer_links}>
+          <h3>Useful Links</h3>
+          <ul>
+            <Link>Explore</Link>
+            <Link>Sign Up</Link>
+            <Link>Login</Link>
+            <Link>About Us</Link>
+            <Link>Rooms</Link>
+            <Link>Bookings</Link>
+          </ul>
+        </div>
+        <div className={styles.socials}>
+          <h3>Socials</h3>
+          <div className={styles.icons}>
+            <img src={facebook_icon} alt='social icon' />
+            <img src={twitter_icon} alt='social icon' />
+            <img src={instagram_icon} alt='social icon' />
+          </div>
+        </div>
+        <div className={styles.contact}>
+          <h3>Contact</h3>
+          <h4>
+            <img src={home} alt='mail icon' />
+            furuset, 1053 oslo
+          </h4>
+          <h4>
+            <img src={mail} alt='mail icon' />
+            furuset@gmail.com
+          </h4>
+          <h4>
+            <img src={phone} alt='mail icon' />
+            +4747960268
+          </h4>
+        </div>
+      </div>
+      <div className={styles.copyright}>
+        <p>Copyright © 2023 | Holidaze, designed and programmed by Nsebo </p>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

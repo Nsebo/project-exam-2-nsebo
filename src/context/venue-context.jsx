@@ -8,19 +8,19 @@ export const VenueProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get('https://nf-api.onrender.com/api/v1/holidaze/venues')
-      .then((res) => {
-        setVenues(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+        .get('https://nf-api.onrender.com/api/v1/holidaze/venues')
+        .then((res) => {
+          setVenues(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
   }, []);
 
   console.log(venues);
   console.log(venues.slice(0, 3));
 
   return (
-    <VenueContext.Provider value={{ venues }}>{children}</VenueContext.Provider>
+      <VenueContext.Provider value={{ venues }}>{children}</VenueContext.Provider>
   );
 };

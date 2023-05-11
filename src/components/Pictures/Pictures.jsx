@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { VenueContext } from '../../context/venue-context';
-import PictureCard from '../PictureCard/PictureCard.jsx';
+import PictureCard from '../PictureCard/PictureCard';
 import styles from './Pictures.module.scss';
 
 const Pictures = () => {

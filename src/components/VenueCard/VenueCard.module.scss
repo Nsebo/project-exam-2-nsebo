@@ -1,0 +1,52 @@
+.card {
+  box-shadow: 1.60184px 3.20368px 25.6295px rgba(37, 49, 65, 0.2);
+  width: 338px;
+  border-radius: 0.4rem;
+
+  .card_body {
+    padding: 0.8rem;
+  }
+
+  .venue_img {
+    width: 338px;
+    height: 288px;
+    object-fit: cover;
+    border-radius: 0.4rem;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 16.0184px;
+    line-height: 19px;
+    color: #081229;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 20.8239px;
+    line-height: 25px;
+    color: #081229;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    margin-top: 0.8rem;
+    font-size: 15.0184px;
+    line-height: 19px;
+    color: #081229;
+  }
+
+  .space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0 1rem 0 0;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
