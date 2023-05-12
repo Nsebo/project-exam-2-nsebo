@@ -12,7 +12,6 @@ const Header = () => {
         <ul className={styles.ul}>
           <li>Explore</li>
           <li>Rooms</li>
-          <li>About</li>
           <li>List your property</li>
         </ul>
       </nav>
