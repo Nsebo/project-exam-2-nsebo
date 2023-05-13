@@ -13,7 +13,7 @@ const Home = () => {
     const { venues } = useContext(VenueContext);
 
     return (
-        <div className={styles.home}>
+        <div className={styles.home}>cteares 
             <Layout>
                 <Hero />
                 <Location />

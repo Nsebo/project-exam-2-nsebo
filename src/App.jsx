@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Signup from './authentication/Signup/Signup.jsx';
 import Login from './authentication/Login/Login.jsx';
+import Profile from "./pages/profile/Profile.jsx";
 import viteLogo from '/vite.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
@@ -15,6 +16,7 @@ function App() {
                 <Route path='/' element={<Home />} />
                 <Route path='signup' element={<Signup />} />
                 <Route path='login' element={<Login />} />
+                <Route path='profile' element={<Profile />} />
             </Routes>
         </div>
     );
