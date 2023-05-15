@@ -1,17 +1,13 @@
-import React from 'react';
-import Header from "../../layouts/Header/Header.jsx";
-import Footer from "../../layouts/Footer/Footer.jsx";
-
+import Sidebar from "../../components/Sidebar/Sidebar.jsx";
+import Details from "../../components/Details/Details.jsx";
+import Layout from "../../layouts/Layout/Layout.jsx";
 
 const Profile = () => {
     return (
-        <div className="profile">
-        <Header/>
-        <Footer/>
-        <div className="profileWrapper">
-        <Sidebar/>
-        </div>
-        </div>
+        <Layout>
+            <Sidebar/>
+            <Details/>
+        </Layout>
     );
 };
 

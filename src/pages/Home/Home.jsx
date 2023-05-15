@@ -14,6 +14,7 @@ const Home = () => {
 
     return (
         <div className={styles.home}>
+
             <Layout>
                 <Hero />
                 <Location />
