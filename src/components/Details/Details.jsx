@@ -8,6 +8,7 @@ const Details = () => {
             <form>
                 <div>
                     <label>Name:
+                        <p>Uzochukwu Cecilia Oloh</p>
                     </label>
                     <button>edit</button>
                 </div>
@@ -19,6 +20,7 @@ const Details = () => {
                 <div>
                     <label>Email Address:
                     </label>
+                    <p>hellooo</p>
                     <button>edit</button>
                 </div>
             </form>
