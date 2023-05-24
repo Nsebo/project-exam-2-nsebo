@@ -3,16 +3,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 6rem;
-  background-color: #f3f6f8;
 
   ul {
     display: flex;
     gap: 2rem;
     li {
-      font-size: 1rem;
-      color: #333;
-      text-transform: uppercase;
-      list-style: none;
+      a {
+        font-size: 1rem;
+        color: #333;
+        text-transform: uppercase;
+        list-style: none;
+        text-decoration: none;
+      }
     }
   }
 

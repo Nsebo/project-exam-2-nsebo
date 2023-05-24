@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Header.module.scss';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -10,9 +11,9 @@ const Header = () => {
       </div>
       <nav className={styles.nav_container}>
         <ul className={styles.ul}>
-          <li>Explore</li>
-          <li>Rooms</li>
-          <li>List your property</li>
+          <Link to='/venues'>Venues</Link>
+            <Link>List your Venues</Link>
+          <Link>Switch to Hosting</Link>
         </ul>
       </nav>
       <div className={styles.btn}>
