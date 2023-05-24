@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import mail from '../../assets/mail.png';
 import phone from '../../assets/phone.png';
 import home from '../../assets/home.png';
-import facebook_icon from '../../assets/facebook_icon.png';
-import twitter_icon from '../../assets/twitter_icon.png';
-import instagram_icon from '../../assets/instagram_icon.png';
+import facebook_icon from '../../assets/facebook.svg';
+import instagram_icon from '../../assets/instagram.svg';
+import twitter_icon from '../../assets/twitter.svg';
 
 const Footer = () => {
   return (
