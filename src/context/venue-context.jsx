@@ -14,8 +14,6 @@ export const VenueProvider = ({ children }) => {
         console.log(err);
       });
   }, []);
-
-
   return (
     <VenueContext.Provider value={{ venues }}>{children}</VenueContext.Provider>
   );
