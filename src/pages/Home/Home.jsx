@@ -8,23 +8,24 @@ import Venue from '../../components/Venue/Venue';
 import { VenueContext } from '../../context/venue-context';
 import { useContext } from 'react';
 import Pictures from '../../components/Pictures/Pictures';
+import Explore from '../../components/Explore/Explore';
 
 const Home = () => {
-    const { venues } = useContext(VenueContext);
+  const { venues } = useContext(VenueContext);
 
-    return (
-        <div className={styles.home}>
-
-            <Layout>
-                <Hero />
-                <Location />
-                {/* <VenueCard /> */}
-                {venues && <Venue />}
-                {venues && <Pictures />}
-                <Subscribe />
-            </Layout>
-        </div>
-    );
+  return (
+    <div className={styles.home}>
+      <Layout>
+        <Hero />
+        <Location />
+        {/* <VenueCard /> */}
+        {venues && <Venue />}
+        <Explore />
+        {/* {venues && <Pictures />} */}
+        <Subscribe />
+      </Layout>
+    </div>
+  );
 };
 
 export default Home;
