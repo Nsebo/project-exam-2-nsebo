@@ -6,7 +6,6 @@ import VenueCard from '../VenueCard/VenueCard';
 const Venue = () => {
   const { venues } = useContext(VenueContext);
   const sixVenues = venues.slice(0, 6);
-  console.log(sixVenues);
 
   return (
     <section className={styles.venue_wrapper}>

@@ -1,0 +1,17 @@
+.venues_wrapper {
+  max-width: 80vw;
+  margin: 5rem auto 2rem;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .venues_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+}

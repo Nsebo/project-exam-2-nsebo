@@ -3,7 +3,7 @@ import bed from '../../assets/bed.png';
 import bath from '../../assets/bath.png';
 import Button from '../../layouts/Button/Button';
 
-const VenueCard = ({ name, imgUrl, price }) => {
+const VenueCard = ({ name, imgUrl, price, id }) => {
   return (
     <div className={styles.card}>
       <img src={imgUrl} alt='room' className={styles.venue_img} />
@@ -23,7 +23,7 @@ const VenueCard = ({ name, imgUrl, price }) => {
         </div>
         <h3>${price}/Night</h3>
         <div className={styles.buttons}>
-          <Button buttonText='View Details' border={true} />
+          <Button buttonText='View Details' border={true} to={`/venue/${id}`} />
           <Button buttonText='Book Now' gray={true} />
         </div>
       </div>
