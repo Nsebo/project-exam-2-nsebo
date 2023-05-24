@@ -19,11 +19,9 @@ const Footer = () => {
         <div className={styles.footer_links}>
           <h3>Useful Links</h3>
           <ul>
-            <Link>Explore</Link>
+            <Link>Venues</Link>
             <Link>Sign Up</Link>
             <Link>Login</Link>
-            <Link>About Us</Link>
-            <Link>Rooms</Link>
             <Link>Bookings</Link>
           </ul>
         </div>
