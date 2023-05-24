@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -114,7 +115,7 @@ const Signup = () => {
 
             <div>
               <p className={styles.signup}>
-                Already have an account?{''}<Link to="/login">log in</Link>
+                Already have an account?{''} <Link>log in</Link>
               </p>
             </div>
           </form>
