@@ -1,0 +1,51 @@
+.explore {
+  max-width: 80vw;
+  margin: 3rem auto;
+
+  h2 {
+    margin: 2rem 0;
+  }
+
+  .explore_container {
+    display: grid;
+    grid-template-areas:
+      'a a a a b b b b'
+      'a a a a b b b b'
+      'a a a a c c d d'
+      'a a a a c c d d';
+    gap: 2rem;
+    position: relative;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .details {
+      position: absolute;
+      bottom: 2rem;
+      color: white;
+      padding: 1rem;
+    }
+
+    .mountain {
+      position: relative;
+      grid-area: a;
+    }
+
+    .beach {
+      position: relative;
+      grid-area: b;
+    }
+
+    .art {
+      position: relative;
+      grid-area: c;
+    }
+
+    .outdoor {
+      position: relative;
+      grid-area: d;
+    }
+  }
+}
