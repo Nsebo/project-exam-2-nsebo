@@ -6,12 +6,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { VenueProvider } from './context/venue-context.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-
-    <React.StrictMode>
-        <BrowserRouter>
-            <VenueProvider>
-                <App />
-            </VenueProvider>
-        </BrowserRouter>
-    </React.StrictMode>
-)
+  <React.StrictMode>
+    <BrowserRouter>
+      <VenueProvider>
+        <App />
+      </VenueProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+);
