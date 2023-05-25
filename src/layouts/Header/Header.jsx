@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header className={styles.header_container}>
-      <div>
-        <h1 className={styles.header_logo}> <Link to='/venues'>Holidaze</Link></h1>
-      </div>
+      <Link to="/">
+        <h1 className={styles.header_logo}>
+           Holidaze
+        </h1>
+      </Link>
       <nav className={styles.nav_container}>
         <ul className={styles.ul}>
           <Link to='/venues'>Venues</Link>
@@ -17,7 +19,7 @@ const Header = () => {
         </ul>
       </nav>
       <div className={styles.btn}>
-        <Button buttonText='Login' to='/login' />
+        <Button buttonText='Login' to='/login' white={true} />
         <Button buttonText='Sign Up' to='/signup' gray={true} />
       </div>
     </header>

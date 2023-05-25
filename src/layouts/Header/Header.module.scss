@@ -3,25 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 6rem;
-
+  background-color: #F3F6F8;
   .header_logo{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #4c5b63;
   }
-  ul {
-    display: flex;
-    font-size: 1rem;
-    li {
-      a {
-        font-size: 1rem;
-        color: #333;
-        text-transform: uppercase;
-        list-style: none;
-        text-decoration: none;
-      }
-    }
-  }
-
   .btn {
     display: flex;
     align-items: center;
