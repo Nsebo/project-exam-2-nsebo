@@ -9,7 +9,7 @@ const Hero = () => {
       <div className={styles.hero_details}>
         <h1>STAY WITH COMFORT</h1>
         <p>Your home away from home where you stay with comfort</p>
-        <Button buttonText='Book Now' to='/book-now' />
+        <Button buttonText='Book Now' to='/book-now' white={true}/>
       </div>
     </section>
   );
