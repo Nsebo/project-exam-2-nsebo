@@ -1,8 +1,11 @@
+
 import React, { useState } from 'react';
 import signupImg from '../../assets/signup-img.jpg';
 import googleIcon from '../../assets/flat-color-icons_google.png';
 import styles from './Signup.module.scss';
 import { Link } from 'react-router-dom';
+
+import { ToastContainer} from 'react-toastify';
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -121,6 +124,7 @@ const Signup = () => {
           </form>
         </div>
       </div>
+      <ToastContainer/>
     </main>
   );
 };
