@@ -14,7 +14,7 @@ const Footer = () => {
       <div className={styles.footer_wrapper}>
         <div className={styles.footer_logo}>
           <h2>Holidaze</h2>
-          <p>Your home away from where you stay with comfort</p>
+          <p>Stay in the world's most remarkable homes</p>
         </div>
         <div className={styles.footer_links}>
           <h3>Useful Links</h3>
