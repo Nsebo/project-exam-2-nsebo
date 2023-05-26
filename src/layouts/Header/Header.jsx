@@ -14,7 +14,7 @@ const Header = () => {
       <nav className={styles.nav_container}>
         <ul className={styles.ul}>
           <Link to='/venues'>Venues</Link>
-            <Link>List your Venues</Link>
+            <Link>List a room</Link>
           <Link>Switch to Hosting</Link>
         </ul>
       </nav>
