@@ -26,6 +26,8 @@ const Venue = () => {
               imgUrl={venue.media[0]}
               price={venue.price}
               name={venue.name}
+                id={venue.id}
+
             />
           );
         })}
