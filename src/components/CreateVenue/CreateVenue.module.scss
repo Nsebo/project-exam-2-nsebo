@@ -1,0 +1,47 @@
+.createVenue_container {
+  max-width: 80vw;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 70%;
+    label {
+      width: 70%;
+      margin: 0 auto;
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        margin-top: 0.2rem;
+        background-color: #d9d9d9;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        font-size: 0.9rem;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    button {
+      display: block;
+      background-color: #4c5b63;
+      width: 40%;
+      color: #fff;
+      padding: 0.9rem 0;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+  }
+}
