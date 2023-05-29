@@ -32,11 +32,11 @@ Holidaze was built with the following requirements in the form of User Stories:
 
 These stacks were used in this project 👇
 
-1. Trello : Used to plan and manage the project tasks.
+1. Trello: Used to plan and manage the project tasks.
 2. Figma: Used to designing the UIs.
-3. Vite :Tool used in staging and building this project.
+3. Vite: Tool used in staging and building this project.
 4. React: Used in building the interactive UIs.
-5. Sass : Used for styling.
+5. Sass: Used for styling.
 6. Netlify: Used to Host the project
 
 ##  Getting Started
