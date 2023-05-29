@@ -5,8 +5,8 @@ Holidaze-app is an application that is used to rent a house for short-time.
 
 ---
 ## Description
-Holidaze is a project that was build like airbnb clone showing how the customer-facing side of the website where users can book holidays at a venue, and an admin-facing side of the website where users can register and manage venues and bookings at those venues. This is my final project at Noroff. 
-In this project we were tasked to put in use all we have learnt this past 2 years as Front-End developer student.
+Holidaze is a project that was build like airbnb clone showing how the customer-facing side of the website where users can book holidays at a venue, and an admin-facing side of the website where users can register and manage venues and bookings at those venues. 
+This is my final project at Noroff. In this project we were tasked to put in use all we have learnt this past 2 years as Front-End developer student.
 
 ## User Stories
 
@@ -27,11 +27,6 @@ Holidaze was built with the following requirements in the form of User Stories:
 13. A registered user may login
 14. A registered user may update their avatar
 15. A registered user may logout
-
-
-This platform can be accessed using any operating system and is available on mobile and Pc.
-This platform is designed to be intuitive and easy to use across any operating system
-We invite you to explore our website, learn about our products and services, and get in touch with us if you have any questions.
 
 ## Tech Stacks 
 
