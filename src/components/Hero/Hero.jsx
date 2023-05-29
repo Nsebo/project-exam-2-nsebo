@@ -10,7 +10,7 @@ const Hero = () => {
         <h1>STAY WITH COMFORT</h1>
         <p>Stay in the world's most remarkable homes
         </p>
-        <Button buttonText='Book Now' to='/book-now' white={true}/>
+        <Button buttonText='Explore more' to='/venues' white={true}/>
       </div>
     </section>
   );
