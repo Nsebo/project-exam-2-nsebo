@@ -1,0 +1,45 @@
+.venueManager_container {
+  margin: 0 0 1rem;
+  .hero_image {
+    width: 100vw;
+    object-fit: cover;
+  }
+
+  .venueManager_wrapper {
+    transform: translateY(-5rem);
+    max-width: 80vw;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1.5rem;
+
+    .venueManager_details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        .logo_details {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+    }
+
+    .my_venues {
+      h1 {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      .my_venues_cards {
+        ul {
+          display: flex;
+          align-items: center;
+          // justify-content: center;
+          flex-wrap: wrap;
+          gap: 3rem;
+        }
+      }
+    }
+  }
+}
