@@ -19,10 +19,10 @@ const Footer = () => {
         <div className={styles.footer_links}>
           <h3>Useful Links</h3>
           <ul>
-            <Link>Venues</Link>
-            <Link>Sign Up</Link>
-            <Link>Login</Link>
-            <Link>Bookings</Link>
+            <Link to="./venues">Venues</Link>
+            <Link to="./Signup">Sign Up</Link>
+            <Link to="./login">Login</Link>
+            <Link to="./bookings">Bookings</Link>
           </ul>
         </div>
         <div className={styles.socials}>
