@@ -1,4 +1,4 @@
-# ** Holidaze - Project-Exam-2 **
+# Holidaze - Project-Exam-2 
 
 ## Introduction
 Holidaze-app is an application that is used to rent a house for short-time. 
