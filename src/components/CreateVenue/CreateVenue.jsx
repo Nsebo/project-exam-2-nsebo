@@ -1,15 +1,14 @@
 import styles from './CreateVenue.module.scss';
-/*import camera from '../../assets/camera.png';
+import camera from '../../assets/camera.png';
 import fileText from '../../assets/file-text.png';
 import mapPin from '../../assets/map-pin.png';
 import home from '../../assets/home.svg';
- */
 import { useContext, useState } from 'react';
 import Header from '../../layouts/Header/Header';
 import Footer from '../../layouts/Footer/Footer';
 import axios from 'axios';
 import { LoginContext } from '../../context/login-context';
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const CreateVenue = () => {
   const navigate = useNavigate();
@@ -53,13 +52,13 @@ const CreateVenue = () => {
       setError('All fields are required');
       return;
     }
-    const deta= {
+    const deta = {
       name,
       description,
-      "media": [media],
-      "price":parseInt(price),
-      "maxGuests":parseInt(maxGuests),
-      "rating":parseInt(rating),
+      media: [media],
+      price: parseInt(price),
+      maxGuests: parseInt(maxGuests),
+      rating: parseInt(rating),
       meta: {
         wifi,
         parking,
@@ -88,8 +87,8 @@ const CreateVenue = () => {
       );
 
       if (response?.data) {
-        window.alert("venue created successful");
-        navigate("/venues")
+        window.alert('venue created successful');
+        navigate('/my-venues');
 
         // Venue creation successful
         // You can redirect the user or show a success message here
