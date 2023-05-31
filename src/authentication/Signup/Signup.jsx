@@ -32,6 +32,7 @@ const Signup = () => {
           <img src={signupImg} alt='Signup Image' />
         </div>
         <div className={styles.signup_details}>
+          <Link to='/'>Back to homepage &rarr;</Link>
           <div className={styles.signup_details_heading}>
             <h1 className={styles.signup_title}>Create an Account</h1>
             <p className={styles.signup_para}>
