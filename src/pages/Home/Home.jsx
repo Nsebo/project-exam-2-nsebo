@@ -17,11 +17,8 @@ const Home = () => {
     <div className={styles.home}>
       <Layout>
         <Hero />
-        <Location />
-        {/* <VenueCard /> */}
         {venues && <Venue />}
         <Explore />
-        {/* {venues && <Pictures />} */}
         <Subscribe />
       </Layout>
     </div>
