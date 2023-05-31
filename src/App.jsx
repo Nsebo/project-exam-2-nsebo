@@ -7,7 +7,6 @@ import Home from './pages/Home/Home.jsx';
 import Venues from './pages/Venues/Venues.jsx';
 import Venue from './pages/Venue/Venue.jsx';
 import CreateVenue from './components/CreateVenue/CreateVenue.jsx';
-import Text from './text.jsx';
 import VenueManager from './pages/VenueManager/VenueManager.jsx';
 import Bookings from './components/Bookings/Bookings.jsx';
 
@@ -19,7 +18,6 @@ function App() {
         <Route path='signup' element={<Signup />} />
         <Route path='login' element={<Login />} />
         <Route path='/venues' element={<Venues />} />
-        <Route path='/text' element={<Text />} />
         <Route path='/my-venues' element={<VenueManager />} />
         <Route path='/my-bookings' element={<Bookings />} />
         <Route path='/create-venues' element={<CreateVenue />} />
