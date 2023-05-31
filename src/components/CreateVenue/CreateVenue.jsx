@@ -33,7 +33,7 @@ const CreateVenue = () => {
 
   const { data } = useContext(LoginContext);
 
-  const token = data.accessToken;
+  const token = data?.accessToken;
   console.log(token);
 
   const handleSubmit = async (e) => {
@@ -41,13 +41,13 @@ const CreateVenue = () => {
 
     // Perform form validation
     if (
-        !name ||
-        !description ||
-        !address ||
-        !city ||
-        !zip ||
-        !country ||
-        !continent
+      !name ||
+      !description ||
+      !address ||
+      !city ||
+      !zip ||
+      !country ||
+      !continent
     ) {
       setError('All fields are required');
       return;
@@ -77,13 +77,13 @@ const CreateVenue = () => {
     };
     try {
       const response = await axios.post(
-          'https://nf-api.onrender.com/api/v1/holidaze/venues',
-          deta,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
+        'https://nf-api.onrender.com/api/v1/holidaze/venues',
+        deta,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
 
       if (response?.data) {
@@ -105,188 +105,188 @@ const CreateVenue = () => {
   };
 
   return (
-      <>
-        <Header />
-        <section className={styles.createVenue_container}>
-          <h1>Create a Venue</h1>
-          <p>Enter Venue Details</p>
-          <form onSubmit={handleSubmit}>
-            <label>
-              Name:
-              <input
-                  type='text'
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                  placeholder='Enter Venue Name'
-              />
-            </label>
-            <label>
-              Description:
-              <textarea
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                  required
-                  placeholder='Enter Description'
-              ></textarea>
-            </label>
-            <label>
-              Media:
-              <input
-                  type='text'
-                  value={media}
-                  onChange={(e) => setMedia(e.target.value)}
-                  required
-                  placeholder='Enter Venue Image Url'
-              />
-            </label>
-            <label>
-              Price (kr NOK):
-              <input
-                  type='number'
-                  value={price}
-                  onChange={(e) => setPrice(parseInt(e.target.value))}
-                  required
-                  placeholder='Enter Venue Price'
-              />
-            </label>
-            <label>
-              Max Guests:
-              <input
-                  type='number'
-                  value={maxGuests}
-                  onChange={(e) => setMaxGuests(parseInt(e.target.value))}
-                  required
-                  placeholder='Enter Venue Maximum Guest'
-              />
-            </label>
-            <label>
-              Rating:
-              <input
-                  type='number'
-                  value={rating}
-                  onChange={(e) => setRating(parseInt(e.target.value))}
-                  required
-                  placeholder='Enter Venue Rating'
-                  minLength='1'
-                  min='0'
-                  max='5'
-              />
-            </label>
-            <label>
-              Wifi:
-              <input
-                  type='checkbox'
-                  checked={wifi}
-                  onChange={(e) => setWifi(e.target.checked)}
-                  required
-              />
-            </label>
-            <label>
-              Parking:
-              <input
-                  type='checkbox'
-                  checked={parking}
-                  onChange={(e) => setParking(e.target.checked)}
-                  required
-              />
-            </label>
-            <label>
-              Breakfast:
-              <input
-                  type='checkbox'
-                  checked={breakfast}
-                  onChange={(e) => setBreakfast(e.target.checked)}
-                  required
-              />
-            </label>
-            <label>
-              Pets:
-              <input
-                  type='checkbox'
-                  checked={pets}
-                  onChange={(e) => setPets(e.target.checked)}
-                  required
-              />
-            </label>
-            <label>
-              Address:
-              <input
-                  type='text'
-                  value={address}
-                  onChange={(e) => setAddress(e.target.value)}
-                  required
-                  placeholder='Enter Venue Address'
-              />
-            </label>
-            <label>
-              City:
-              <input
-                  type='text'
-                  value={city}
-                  onChange={(e) => setCity(e.target.value)}
-                  required
-                  placeholder='Enter Venue City'
-              />
-            </label>
-            <label>
-              ZIP:
-              <input
-                  type='text'
-                  value={zip}
-                  onChange={(e) => setZip(e.target.value)}
-                  required
-                  placeholder='Enter Venue Postal Code'
-              />
-            </label>
-            <label>
-              Country:
-              <input
-                  type='text'
-                  value={country}
-                  onChange={(e) => setCountry(e.target.value)}
-                  required
-                  placeholder='Enter Venue Country'
-              />
-            </label>
-            <label>
-              Continent:
-              <input
-                  type='text'
-                  value={continent}
-                  onChange={(e) => setContinent(e.target.value)}
-                  required
-                  placeholder='Enter Venue Continent'
-              />
-            </label>
-            <label>
-              Latitude:
-              <input
-                  type='number'
-                  value={lat}
-                  onChange={(e) => setLat(e.target.value)}
-                  required
-                  placeholder='Enter Venue Latitude'
-              />
-            </label>
-            <label>
-              Longitude:
-              <input
-                  type='number'
-                  value={lng}
-                  onChange={(e) => setLng(e.target.value)}
-                  required
-                  placeholder='Enter Venue Longitude'
-              />
-            </label>
-            {error && <p>{error}</p>}
-            <button type='submit' className={styles.create_button}>
-              Create Venue
-            </button>
-          </form>
-        </section>
-        <Footer />
-      </>
+    <>
+      <Header />
+      <section className={styles.createVenue_container}>
+        <h1>Create a Venue</h1>
+        <p>Enter Venue Details</p>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Name:
+            <input
+              type='text'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              placeholder='Enter Venue Name'
+            />
+          </label>
+          <label>
+            Description:
+            <textarea
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              required
+              placeholder='Enter Description'
+            ></textarea>
+          </label>
+          <label>
+            Media:
+            <input
+              type='text'
+              value={media}
+              onChange={(e) => setMedia(e.target.value)}
+              required
+              placeholder='Enter Venue Image Url'
+            />
+          </label>
+          <label>
+            Price (kr NOK):
+            <input
+              type='number'
+              value={price}
+              onChange={(e) => setPrice(parseInt(e.target.value))}
+              required
+              placeholder='Enter Venue Price'
+            />
+          </label>
+          <label>
+            Max Guests:
+            <input
+              type='number'
+              value={maxGuests}
+              onChange={(e) => setMaxGuests(parseInt(e.target.value))}
+              required
+              placeholder='Enter Venue Maximum Guest'
+            />
+          </label>
+          <label>
+            Rating:
+            <input
+              type='number'
+              value={rating}
+              onChange={(e) => setRating(parseInt(e.target.value))}
+              required
+              placeholder='Enter Venue Rating'
+              minLength='1'
+              min='0'
+              max='5'
+            />
+          </label>
+          <label>
+            Wifi:
+            <input
+              type='checkbox'
+              checked={wifi}
+              onChange={(e) => setWifi(e.target.checked)}
+              required
+            />
+          </label>
+          <label>
+            Parking:
+            <input
+              type='checkbox'
+              checked={parking}
+              onChange={(e) => setParking(e.target.checked)}
+              required
+            />
+          </label>
+          <label>
+            Breakfast:
+            <input
+              type='checkbox'
+              checked={breakfast}
+              onChange={(e) => setBreakfast(e.target.checked)}
+              required
+            />
+          </label>
+          <label>
+            Pets:
+            <input
+              type='checkbox'
+              checked={pets}
+              onChange={(e) => setPets(e.target.checked)}
+              required
+            />
+          </label>
+          <label>
+            Address:
+            <input
+              type='text'
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              required
+              placeholder='Enter Venue Address'
+            />
+          </label>
+          <label>
+            City:
+            <input
+              type='text'
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              required
+              placeholder='Enter Venue City'
+            />
+          </label>
+          <label>
+            ZIP:
+            <input
+              type='text'
+              value={zip}
+              onChange={(e) => setZip(e.target.value)}
+              required
+              placeholder='Enter Venue Postal Code'
+            />
+          </label>
+          <label>
+            Country:
+            <input
+              type='text'
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+              required
+              placeholder='Enter Venue Country'
+            />
+          </label>
+          <label>
+            Continent:
+            <input
+              type='text'
+              value={continent}
+              onChange={(e) => setContinent(e.target.value)}
+              required
+              placeholder='Enter Venue Continent'
+            />
+          </label>
+          <label>
+            Latitude:
+            <input
+              type='number'
+              value={lat}
+              onChange={(e) => setLat(e.target.value)}
+              required
+              placeholder='Enter Venue Latitude'
+            />
+          </label>
+          <label>
+            Longitude:
+            <input
+              type='number'
+              value={lng}
+              onChange={(e) => setLng(e.target.value)}
+              required
+              placeholder='Enter Venue Longitude'
+            />
+          </label>
+          {error && <p>{error}</p>}
+          <button type='submit' className={styles.create_button}>
+            Create Venue
+          </button>
+        </form>
+      </section>
+      <Footer />
+    </>
   );
 };
 
