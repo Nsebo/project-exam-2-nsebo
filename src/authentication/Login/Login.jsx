@@ -25,7 +25,7 @@ const Login = () => {
           <img src={loginImg} alt='login Image' />
         </div>
         <div className={styles.login_details}>
-          <Link to='/'>&rarr;</Link>
+          <Link to='/'>Back to homepage &rarr;</Link>
           <div className={styles.login_details_heading}>
             <h1 className={styles.login_title}>
               Welcome back, {signUpData.name}
