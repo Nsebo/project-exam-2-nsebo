@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.copyright}>
-        <p>Copyright © 2023 | Holidaze, designed and programmed by Nsebo </p>
+        <p>Copyright © 2023 | Holidaze by Nsebo</p>
       </div>
     </footer>
   );
