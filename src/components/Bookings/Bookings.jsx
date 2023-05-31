@@ -3,6 +3,8 @@ import { LoginContext } from '../../context/login-context';
 import axios from 'axios';
 import Header from '../../layouts/Header/Header';
 import Footer from '../../layouts/Footer/Footer';
+import BookingCard from '../BookingCard/BookingCard';
+import styles from './Bookings.module.scss';
 
 const Bookings = () => {
   console.log('hello');
@@ -37,16 +39,20 @@ const Bookings = () => {
     }
   }, [accessToken]);
 
+  console.log(bookings.venue);
+
   return (
     <>
       <Header />
-      <div>
-        <h1>Booking List</h1>
+      <div className={styles.bookings_wrapper}>
+        <h1>My Bookings</h1>
         {bookings.map((booking) => (
-          <div key={booking.id}>
-            <p>Booking ID: {booking.id}</p>
-            {/* Display other booking details as needed */}
-          </div>
+          <BookingCard
+            key={booking.id}
+            venue={booking.venue}
+            dateFrom={booking.dateFrom}
+            dateTo={booking.dateTo}
+          />
         ))}
       </div>
       <Footer />
