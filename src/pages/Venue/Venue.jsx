@@ -13,6 +13,13 @@ import axios from 'axios';
 
 const Venue = () => {
   const [venue, setVenue] = useState('');
+  const { venueId } = useParams();
+
+  const [dateFrom, setDateFrom] = useState('');
+  const [dateTo, setDateTo] = useState('');
+  const [guests, setGuests] = useState(1);
+  // const [venueId, setVenueId] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const {
     name,
@@ -27,6 +34,48 @@ const Venue = () => {
     maxGuests,
   } = venue;
 
+  const handleBookingSubmit = async (e) => {
+    e.preventDefault();
+
+    if (isNaN(guests)) {
+      setErrorMessage('Please enter a valid number for guests.');
+      return;
+    }
+
+    const bookingData = {
+      dateFrom: new Date(dateFrom),
+      dateTo: new Date(dateTo),
+      guests: parseInt(guests),
+      venueId,
+    };
+    console.log(dateFrom, dateTo, guests, venueId);
+
+    try {
+      const accessToken = localStorage.getItem('accessToken');
+
+      const response = await axios.post(
+        'https://nf-api.onrender.com/api/v1/holidaze/bookings',
+        bookingData,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
+
+      console.log('Booking created:', response.data);
+      // You can handle the success response here, such as showing a success message or redirecting the user.
+    } catch (error) {
+      console.error('Booking creation failed:', error);
+      setErrorMessage('Failed to create booking. Please try again.');
+      // You can handle the error response here, such as showing an error message to the user.
+    }
+  };
+
+  // console.log(errorMessage, venueId);
+
+  // console.log(errorMessage);
+
   // const isoCreatedDateString = created;
   // const isoUpdatedDateString = updated;
   // const createdDate = new Date(isoCreatedDateString);
@@ -39,10 +88,11 @@ const Venue = () => {
   // console.log(formattedCreatedDate);
   // console.log(formattedUpdatedDate);
 
-  const { venueId } = useParams();
   useEffect(() => {
     axios
-      .get(`https://nf-api.onrender.com/api/v1/holidaze/venues/${venueId}`)
+      .get(
+        `https://nf-api.onrender.com/api/v1/holidaze/venues/${venueId}?_owner=true`
+      )
       .then((res) => {
         setVenue(res.data);
       })
@@ -115,34 +165,50 @@ const Venue = () => {
           </div>
           <div className={styles.bookings}>
             <h3>{price}kr NOK nights</h3>
-            <div className={styles.bookings_details}>
+            <form
+              className={styles.bookings_details}
+              onSubmit={handleBookingSubmit}
+            >
               <div className={styles.checks}>
-                <label htmlFor='checkIn'>
-                  {' '}
-                  Check-In
-                  <input type='date' />
+                <label>
+                  Check In:
+                  <input
+                    type='date'
+                    value={dateFrom}
+                    onChange={(e) => setDateFrom(e.target.value)}
+                    required
+                  />
                 </label>
-                <label htmlFor='checkOut'>
-                  {' '}
-                  Check-Out
-                  <input type='date' />
+                <label>
+                  Check Out:
+                  <input
+                    type='date'
+                    value={dateTo}
+                    onChange={(e) => setDateTo(e.target.value)}
+                    required
+                  />
                 </label>
               </div>
               <div className={styles.guests}>
-                <label htmlFor='guests'>
-                  Guests
-                  <select name='guest'>
-                    <option value='one'>1 guest</option>
-                    <option value='two'>2 guest</option>
-                    <option value='three'>3 guest</option>
-                    <option value='four'>4 guest</option>
-                    <option value='five'>5 guest</option>
-                  </select>
+                <label>
+                  Guests:
+                  <input
+                    type='number'
+                    value={guests}
+                    onChange={(e) => setGuests(parseInt(e.target.value))}
+                    required
+                  />
                 </label>
               </div>
-              <Button buttonText='Reserve' gray={true} width={true} />
+              <button>Submit</button>
+              <Button
+                buttonText='Reserve'
+                gray={true}
+                width={true}
+                submit={true}
+              />
               <small>You won't be charged yet</small>
-            </div>
+            </form>
           </div>
         </div>
       </div>
