@@ -64,13 +64,11 @@ const Header = () => {
           <nav className={styles.nav_container}>
             <ul className={styles.ul}>
               <Link to='/venues'>Explore</Link>
-              <Link to='/my-venues'>Rooms</Link>
               {data?.venueManager ? (
                   <Link to='/my-venues'>My Venues</Link>
               ) : (
                   <Link to='/my-bookings'>My Bookings</Link>
               )}
-              <Link to='/create-venues'>List a room</Link>
             </ul>
           </nav>
           {data?.accessToken ? (
