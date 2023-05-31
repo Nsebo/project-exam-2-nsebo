@@ -15,6 +15,7 @@ const Venue = () => {
         {sixVenues.map((venue) => {
           return (
             <VenueCard
+              key={venue.id}
               imgUrl={venue.media[0]}
               price={venue.price}
               name={venue.name}
