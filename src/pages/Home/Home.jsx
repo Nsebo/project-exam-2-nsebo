@@ -12,7 +12,6 @@ import Explore from '../../components/Explore/Explore';
 
 const Home = () => {
   const { venues } = useContext(VenueContext);
-
   return (
     <div className={styles.home}>
       <Layout>
