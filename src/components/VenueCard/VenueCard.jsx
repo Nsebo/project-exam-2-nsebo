@@ -24,7 +24,6 @@ const VenueCard = ({ name, imgUrl, price, id }) => {
         <h3>${price}/Night</h3>
         <div className={styles.buttons}>
           <Button buttonText='View Details' border={true} to={`/venue/${id}`} />
-          <Button buttonText='Book Now' gray={true} />
         </div>
       </div>
     </div>
