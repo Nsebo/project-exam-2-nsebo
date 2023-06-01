@@ -22,14 +22,12 @@ const EditVenue = ({ venueId }) => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    // Fetch venue details using the venueId
     const fetchVenue = async () => {
       try {
         const response = await axios.get(
           `https://nf-api.onrender.com/api/v1/holidaze/venues/${venueId}`
         );
         const venueData = response.data;
-
         setName(venueData.name);
         setDescription(venueData.description);
         setMedia(venueData.media[0]);
@@ -57,8 +55,6 @@ const EditVenue = ({ venueId }) => {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-
-    // Perform form validation
     if (
       !name ||
       !description ||
@@ -101,14 +97,9 @@ const EditVenue = ({ venueId }) => {
         `https://nf-api.onrender.com/api/v1/holidaze/venues/${venueId}`,
         updatedVenueData
       );
-
       if (response.data) {
-        // Venue update successful
-        // You can redirect the user or show a success message here
         console.log('Venue update successful');
       } else {
-        // Venue update failed
-        // You can handle the error and display an appropriate message
         setError('Venue update failed');
       }
     } catch (error) {
