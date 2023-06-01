@@ -6,10 +6,8 @@ import axios from 'axios';
 const BookingCard = ({ dateFrom, dateTo, venue }) => {
   const [owners, setOwners] = useState('');
   const { data } = useContext(LoginContext);
-
   const accessToken = localStorage.getItem('accessToken');
   const { name: ownerName, email, avatar } = owners;
-  //   console.log(owners);
 
   useEffect(() => {
     const fetchOwners = async () => {
@@ -25,10 +23,8 @@ const BookingCard = ({ dateFrom, dateTo, venue }) => {
 
         setOwners(response.data.owner);
         console.log('Data:', response.data.owner);
-        // You can handle the response data here, such as updating the state with the fetched bookings.
       } catch (error) {
         console.error('Error fetching Owner:', error);
-        // You can handle the error here, such as showing an error message to the user.
       }
     };
 
