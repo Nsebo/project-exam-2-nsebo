@@ -57,7 +57,7 @@ const VenueManager = () => {
                 <img src={home_logo} alt='home-logo' />
                 <div className={styles.logo_words}>
                   <h3>Holidaze Venue</h3>
-                  <small>Lorem ipsum dolor sit amet consectetur.</small>
+                  <small>Stay in the world's most remarkable homes</small>
                 </div>
               </div>
             </div>
