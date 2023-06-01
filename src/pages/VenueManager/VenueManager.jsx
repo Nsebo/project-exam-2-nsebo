@@ -84,7 +84,7 @@ const VenueManager = () => {
                       description={venue.description}
                       price={venue.price}
                       id={venue.id}
-                      onDelete={handleVenueDelete} // Pass the callback function
+                      onDelete={handleVenueDelete}
                     />
                   ))}
                 </ul>
