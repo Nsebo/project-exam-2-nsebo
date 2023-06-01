@@ -37,15 +37,15 @@ const Footer = () => {
           <h3>Contact</h3>
           <h4>
             <img src={home} alt='mail icon' />
-            furuset, 1053 oslo
+            noroff schools, oslo
           </h4>
           <h4>
             <img src={mail} alt='mail icon' />
-            furuset@gmail.com
+            noroff@gmail.com
           </h4>
           <h4>
             <img src={phone} alt='mail icon' />
-            +4747960268
+            +4723456723
           </h4>
         </div>
       </div>
