@@ -2,15 +2,20 @@ import React, { useContext } from 'react';
 import styles from './Venue.module.scss';
 import { VenueContext } from '../../context/venue-context';
 import VenueCard from '../VenueCard/VenueCard';
+import { Link } from 'react-router-dom';
 
 const Venue = () => {
   const { venues } = useContext(VenueContext);
-  const sixVenues = venues.slice(0, 6);
-
+  const sixVenues = venues.slice(0, 3);
   return (
     <section className={styles.venue_wrapper}>
-      <h3>TOP DESTINATION</h3>
-      <h2>Explore Top Destination</h2>
+        <section className={styles.venue}>
+            <section className={styles.venue_left}>
+                <h3>Featured Venues</h3>
+                <p>Explore our featured Venues</p>
+            </section>
+            <Link to='/venues' className={styles.venue_right}>View all items</Link>
+        </section>
       <div className={styles.venue_container}>
         {sixVenues.map((venue) => {
           return (
@@ -29,3 +34,4 @@ const Venue = () => {
 };
 
 export default Venue;
+
