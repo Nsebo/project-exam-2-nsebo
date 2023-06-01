@@ -30,16 +30,11 @@ const CreateVenue = () => {
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
   const [error, setError] = useState('');
-
   const { data } = useContext(LoginContext);
-
   const token = data?.accessToken;
-  console.log(token);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Perform form validation
     if (
       !name ||
       !description ||
@@ -87,19 +82,12 @@ const CreateVenue = () => {
       );
 
       if (response?.data) {
-        window.alert('venue created successful');
+        window.alert('venue creation successful');
         navigate('/my-venues');
-
-        // Venue creation successful
-        // You can redirect the user or show a success message here
-        console.log('Venue creation successful');
       } else {
-        // Venue creation failed
-        // You can handle the error and display an appropriate message
         setError('Venue creation failed');
       }
     } catch (error) {
-      // Handle any network errors
       setError('Error: ' + error.message);
     }
   };
