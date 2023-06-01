@@ -8,14 +8,11 @@ import searchIcon from '../../assets/search.svg';
 const Venues = () => {
   const { venues, setSearchVenues, searchVenues } = useContext(VenueContext);
   const Venues = venues.slice(0, 21);
-
   const onSearchHandler = (e) => {
     if (!e.target.value) return setSearchVenues(venues);
-
     const filteredVenues = venues.filter((venue) => {
       return venue.name.toLowerCase().includes(e.target.value.toLowerCase());
     });
-    console.log(filteredVenues);
     setSearchVenues(filteredVenues);
   };
   return (
