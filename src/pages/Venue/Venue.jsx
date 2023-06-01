@@ -64,29 +64,11 @@ const Venue = () => {
       );
 
       console.log('Booking created:', response.data);
-      // You can handle the success response here, such as showing a success message or redirecting the user.
     } catch (error) {
       console.error('Booking creation failed:', error);
       setErrorMessage('Failed to create booking. Please try again.');
-      // You can handle the error response here, such as showing an error message to the user.
     }
   };
-
-  // console.log(errorMessage, venueId);
-
-  // console.log(errorMessage);
-
-  // const isoCreatedDateString = created;
-  // const isoUpdatedDateString = updated;
-  // const createdDate = new Date(isoCreatedDateString);
-  // const updatedDate = new Date(isoUpdatedDateString);
-
-  // const options = { day: '2-digit', month: 'short', year: 'numeric' };
-  // const formatter = new Intl.DateTimeFormat('en-US', options);
-  // const formattedCreatedDate = formatter.format(createdDate);
-  // const formattedUpdatedDate = formatter.format(updatedDate);
-  // console.log(formattedCreatedDate);
-  // console.log(formattedUpdatedDate);
 
   useEffect(() => {
     axios
@@ -207,7 +189,6 @@ const Venue = () => {
                 width={true}
                 submit={true}
               />
-              <small>You won't be charged yet</small>
             </form>
           </div>
         </div>
