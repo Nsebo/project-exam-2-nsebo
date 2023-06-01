@@ -13,11 +13,9 @@ const VenueManagerCard = ({
 }) => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
-
   const handleDelete = async () => {
     try {
       const accessToken = localStorage.getItem('accessToken');
-
       await axios.delete(
         `https://nf-api.onrender.com/api/v1/holidaze/venues/${id}`,
         {
@@ -27,12 +25,9 @@ const VenueManagerCard = ({
         }
       );
 
-      // Venue delete successful
-      // You can redirect the user or show a success message here
       alert('Venue delete successful');
-      onDelete(id); // Call the onDelete callback from the parent component
+      onDelete(id);
     } catch (error) {
-      // Handle any network errors or server errors
       setError('Error: ' + error.response.data.message);
     }
   };
