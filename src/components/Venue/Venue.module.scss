@@ -12,3 +12,17 @@
     flex-wrap: wrap;
   }
 }
+
+.venue{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4c5b63;
+  margin: 1.5rem;
+  .venue_left{
+    font-size: 1.2rem;
+  }
+  .venue_right {
+    cursor: pointer;
+  }
+}
